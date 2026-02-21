@@ -1,0 +1,23 @@
+# VS Code
+.vscode/
+
+# Compiled class files
+*.class
+
+# Jar files
+*.jar
+
+# Logs
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Build folders
+target/
+bin/
+out/
+build/
+dist/
+
