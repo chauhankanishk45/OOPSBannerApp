@@ -1,63 +1,27 @@
 /**
-* 00PSBannerApp UC6 - 00PS Banner Application (Use Case 6)
+* 00PSBannerApp UC5 - Render 00PS as Banner using Inline Array Initialization
 *
-* This use case extends UC5 by implementing a modular approach to generate each
-* letter's pattern through dedicated methods. This enhances code reusability and
-* maintainability by separating pattern generation logic from the main display logic.
+* This use case extends UC4 by defining and populating the String array in a more
+* concise way at the time of declaration using String.join() method to create each
+* line of the banner. This further enhances code readability and maintainability.
 
 * @author Developer
-* @version 6.0
+* @version 5.0
 */
 
 public class OOPSBannerApp {
-	public static String[] getOPattern() {
-		return new String[] {
-			"   ***   ",
-			" **   ** ",
-			"**     **",
-			"**     **",
-			"**     **",
-			" **   ** ",
-			"   ***   "
-			};
-	}
-
-	public static String[] getPPattern() {
-		return new String[] {
-			"*******  ",
-			"**     **",
-			"**     **",
-			"*******  ",
-			"**       ",
-			"**       ",
-			"**       "
-			};
-	}
-
-	public static String[] getSPattern() {
-		return new String[] {
-			"   ****  ",
-			" **    **",
-			"**       ",
-			"  *****  ",
-			"       **",
-			"**    ** ",
-			"  ****   "
-			};
-	}
-
-	public static void main(String[] args) {
-		String[] oPattern = getOPattern();
-		String[] pPattern = getPPattern();
-		String[] sPattern = getSPattern();
-
-		for (int i=0; i<oPattern.length; i++) {
-			System.out.println(
-				oPattern[i] + " " +
-				oPattern[i] + " " +
-				pPattern[i] + " " +
-				sPattern[i]
-			);
+	public static void  main(String[] args) {
+		String[] lines = {
+			String.join(" ", "   ***   ", "   ***   ", "*******  ", "   ****  "),
+			String.join(" ", " **   ** ", " **   ** ", "**     **", " **    **"),
+			String.join(" ", "**     **", "**     **", "**     **", "**       "),
+			String.join(" ", "**     **", "**     **", "*******  ", "  *****  "),
+			String.join(" ", "**     **", "**     **", "**       ", "       **"),
+			String.join(" ", " **   ** ", " **   ** ", "**       ", "**    ** "),
+			String.join(" ", "   ***   ", "   ***   ", "**       ", "  ****   ")
+		};
+		for (String line:lines) {
+			System.out.println(line);
 		}
 	}
 }
