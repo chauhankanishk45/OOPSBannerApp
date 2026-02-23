@@ -53,9 +53,9 @@ public class OOPSBannerApp {
 
 		for (int i=0; i<oPattern.length; i++) {
 			System.out.println(
-				oPattern[i] + " " +
-				oPattern[i] + " " +
-				pPattern[i] + " " +
+				oPattern[i] + "  " +
+				oPattern[i] + "  " +
+				pPattern[i] + "  " +
 				sPattern[i]
 			);
 		}
